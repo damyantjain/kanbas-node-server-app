@@ -1,0 +1,25 @@
+{
+  "name": "kanbas-node-server-app",
+  "version": "1.0.0",
+  "description": "Node.js HTTP Web server for the Kanbas application",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damyantjain/kanbas-node-server-app.git"
+  },
+  "keywords": [
+    "Node",
+    "REST",
+    "Server",
+    "HTTP"
+  ],
+  "author": "Damyant Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/damyantjain/kanbas-node-server-app/issues"
+  },
+  "homepage": "https://github.com/damyantjain/kanbas-node-server-app#readme"
+}
