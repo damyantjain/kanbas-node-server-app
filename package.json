@@ -1,10 +1,12 @@
 {
+  "type": "module",
   "name": "kanbas-node-server-app",
   "version": "1.0.0",
   "description": "Node.js HTTP Web server for the Kanbas application",
-  "main": "index.js",
+  "main": "App.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node App.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/damyantjain/kanbas-node-server-app/issues"
   },
-  "homepage": "https://github.com/damyantjain/kanbas-node-server-app#readme"
+  "homepage": "https://github.com/damyantjain/kanbas-node-server-app#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
