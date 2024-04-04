@@ -30,14 +30,27 @@ export default function UserRoutes(app) {
     currentUser = await dao.findUserById(userId);
     res.json(status);
   };
-  const signup = async (req, res) => {};
+  const signup = async (req, res) => {
+    const user = await dao.findUserByUsername(req.body.username);
+    if (user) {
+      res.status(400).json({ message: "Username already taken" });
+      return;
+    }
+    currentUser = await dao.createUser(req.body);
+    res.json(currentUser);
+  };
+  app.post("/api/users/signup", signup);
   const signin = async (req, res) => {
     const { username, password } = req.body;
     currentUser = await dao.findUserByCredentials(username, password);
     res.json(currentUser);
   };
 
-  const signout = (req, res) => {};
+  const signout = (req, res) => {
+    currentUser = null;
+    res.sendStatus(200);
+  };
+  app.post("/api/users/signout", signout);
   const profile = async (req, res) => {
     res.json(currentUser);
   };
