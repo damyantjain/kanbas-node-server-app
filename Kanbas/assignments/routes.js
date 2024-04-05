@@ -33,8 +33,8 @@ export default function AssignmentRoutes(app) {
   const createAssignment = async (req, res) => {
     req.body.course = req.params.cid;
     req.body.id = new Date().getTime().toString();
-    const module = await dao.createAssignment(req.body);
-    res.json(module);
+    const assignment = await dao.createAssignment(req.body);
+    res.json(assignment);
   };
   app.get("/api/courses/:cid/assignments", findAssignmentByCourseId);
   app.put("/api/assignments/:aid", updateAssignment);
